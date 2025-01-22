@@ -32,6 +32,10 @@ mongoose.connect(process.env.MONGO_URL , {
     .then(() => console.log('MongoDB connected'))
     .catch((err) => console.error('MongoDB connection error:', err));
 
+app.get('/', (req,res) => {
+  res.json("Email Template");
+})
+
 const templateSchema = new mongoose.Schema({
     title: { type: String, required: true },
     content: { type: String, required: true },
