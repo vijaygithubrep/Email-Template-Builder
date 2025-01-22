@@ -94,24 +94,19 @@ app.get("/renderTemplate/:id", async (req, res) => {
 app.post("/api/templates/render", async (req, res) => {
     try {
       const { title, content, imageUrl } = req.body;
-  
-      // Render the HTML file using EJS
       const html = await ejs.renderFile(path.join(__dirname, "layout.html"), {
         title,
         content,
         imageUrl: imageUrl ? `http://localhost:5000${imageUrl}` : null,
       });
-  
-      // Save the rendered HTML file
+
       const outputPath = path.join(__dirname, "output.html");
       fs.writeFileSync(outputPath, html);
-  
-      // Send the file for download
       res.download(outputPath, "template.html", (err) => {
         if (err) {
           console.error("Error sending file:", err);
         }
-        fs.unlinkSync(outputPath); // Clean up the file after download
+        fs.unlinkSync(outputPath); 
       });
     } catch (err) {
       res.status(500).json({ message: "Failed to render template" });
