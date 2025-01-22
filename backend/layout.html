@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            margin-top: 5vw;
+        }
+        .email-template {
+            max-width: 600px;
+            margin: 0 auto;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .email-template img {
+            max-width: 100%;
+            height: auto;
+        }
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin: 20px 0;
+            margin-top: 4vw;
+        }
+        .content {
+            font-size: 16px;
+            margin-bottom: 20px;
+            text-align: center;
+            margin-top: 4vw;
+        }
+        .logo-img {
+            height: 5vw;
+            width: 6vw;
+            margin-left: 17vw;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-template">
+        <% if (imageUrl) { %>
+            <img class="logo-img" src="https://i.pinimg.com/736x/43/9b/2b/439b2b48e3bc55f6c2c0a4144d09029b.jpg" alt="Logo">
+        <% } %>
+        <div class="title"><%= title %></div>
+        <div class="content"><%= content %></div>
+    </div>
+</body>
+</html>

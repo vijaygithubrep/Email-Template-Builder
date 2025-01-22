@@ -1,0 +1,91 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin-top: -4vw;
+  }
+  
+  /* Email Template Container */
+  .email-template {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Add Logo Button */
+  .add-logo {
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    border: 1px dashed #ccc;
+    border-radius: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  /* Title Styling */
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 15px 0;
+    margin-top: 30px;
+    color: #333;
+    border: 1px solid #ffde9a;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  /* Content Styling */
+  .content {
+    font-size: 16px;
+    margin: 10px 0 20px;
+    color: #666;
+    line-height: 1.5;
+  }
+  
+  /* Buttons */
+  .actions button {
+    padding: 10px 20px;
+    margin: 10px 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .actions .get-started {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  .actions .learn-more {
+    background-color: #f8f9fa;
+    color: #000;
+  }
+  
+  /* Image Preview or Upload */
+  .image-preview {
+    margin: 20px 0;
+  }
+  
+  .image-preview input[type="file"] {
+    padding: 10px;
+  }
+  
+  .image-preview img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
