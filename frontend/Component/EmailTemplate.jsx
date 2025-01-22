@@ -27,7 +27,6 @@ const EmailTemplate = () => {
       if (image) {
         formData.append("image", image);
       }
-  
       try {
         const response = await axios.post("http://localhost:5000/api/templates", formData, {
           headers: {
@@ -47,11 +46,10 @@ const EmailTemplate = () => {
             'http://localhost:5000/api/templates/render',
             { title, content, imageUrl },
             {
-              responseType: "blob", // Important for downloading files
+              responseType: "blob",
             }
           );
       
-          // Create a download link
           const url = window.URL.createObjectURL(new Blob([response.data]));
           const link = document.createElement("a");
           link.href = url;
@@ -96,11 +94,8 @@ const EmailTemplate = () => {
             <input type="file" accept="image/*" onChange={handleImageChange} />
           )}
         </div>
-  
-        <button className="save-button" onClick={handleSubmit} style={{background:"skyblue",  height:"26px", borderRadius:"12px"}}>
-          Save Template</button>
-        <button className="download-button" onClick={handleDownload} style={{background:"skyblue", height:"26px", borderRadius:"12px", marginLeft:"40px"}}>Download Template </button>
-                      
+        <button className="save-button" onClick={handleSubmit} style={{background:"skyblue",  height:"26px", borderRadius:"12px"}}> Save Template </button>
+        <button className="download-button" onClick={handleDownload} style={{background:"skyblue", height:"26px", borderRadius:"12px", marginLeft:"40px"}}> Download Template </button>
       </div>
     );
   };
